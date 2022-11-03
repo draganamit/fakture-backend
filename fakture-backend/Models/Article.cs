@@ -12,9 +12,7 @@
         public float IznostSaRabatomBezPdv { get; set; }
         public float Pdv { get; set; }
         public float Ukupno { get; set; }
-
-
-
+        
 
 
     }

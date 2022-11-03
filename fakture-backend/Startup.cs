@@ -18,6 +18,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using fakture_backend.Services;
 
 namespace fakture_backend
 {
@@ -37,6 +38,8 @@ namespace fakture_backend
             services.AddAuthentication(AzureADDefaults.BearerAuthenticationScheme)
                 .AddAzureADBearer(options => Configuration.Bind("AzureAd", options));
             services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<IFactureService, FactureService>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
@@ -52,6 +55,12 @@ namespace fakture_backend
                 };
             }
             );
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.WithOrigins("http://localhost:4200")
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,7 +72,7 @@ namespace fakture_backend
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors("MyPolicy");
             app.UseRouting();
 
             app.UseAuthentication();
