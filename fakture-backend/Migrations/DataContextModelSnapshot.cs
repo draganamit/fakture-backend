@@ -133,7 +133,8 @@ namespace fakture_backend.Migrations
                 {
                     b.HasOne("fakture_backend.Models.Facture", null)
                         .WithMany("Artikli")
-                        .HasForeignKey("FactureId");
+                        .HasForeignKey("FactureId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

@@ -11,20 +11,30 @@ namespace fakture_backend.Controllers
     [Route("[controller]")]
     public class FactureController : ControllerBase
     {
-        private readonly IFactureService _factureService1;
+        private readonly IFactureService _factureService;
 
-        public FactureController(IFactureService factureService1)
+        public FactureController(IFactureService factureService)
         {
-            _factureService1 = factureService1;
+            _factureService = factureService;
         }
         
         [HttpGet("GetAllFacture")]
         public async Task<IActionResult> GetAllFacture()
         {
-            ServiceResponse<List<GetAllFactureDto>> response = await _factureService1.GetAllFacture();
+            ServiceResponse<List<GetAllFactureDto>> response = await _factureService.GetAllFacture();
             if (response.Data == null)
             {
                return NotFound(response);
+            }
+            return Ok(response);
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteFacture(int id)
+        {
+            ServiceResponse<List<GetAllFactureDto>> response = await _factureService.DeleteFacture(id);
+            if(response.Data == null)
+            {
+                return NotFound(response);
             }
             return Ok(response);
         }

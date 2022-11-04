@@ -64,3 +64,16 @@ C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp
 C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.Private.ServiceModel.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.Reflection.DispatchProxy.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.ServiceModel.Http.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.ServiceModel.NetTcp.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.ServiceModel.Primitives.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.ServiceModel.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.ServiceModel.Security.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\VisioForge.Core.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\VisioForge.Libs.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\VisioForge.MediaFramework.dll
+C:\Users\draga\source\repos\fakture-backend\fakture-backend\bin\Debug\netcoreapp3.1\VisioForge.Types.dll
