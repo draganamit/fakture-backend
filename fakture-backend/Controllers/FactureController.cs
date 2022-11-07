@@ -38,7 +38,7 @@ namespace fakture_backend.Controllers
             }
             return Ok(response);
         }
-        [HttpPost("AddFacture")]
+        [HttpPost]
         public async Task<IActionResult> AddFacture(AddFactureDto newFacture)
         {
             ServiceResponse<List<GetAllFactureDto>> response = await _factureService.AddFacture(newFacture);
