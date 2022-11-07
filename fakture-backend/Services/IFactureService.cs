@@ -9,5 +9,8 @@ namespace fakture_backend.Services
     {
         public Task<ServiceResponse<List<GetAllFactureDto>>> GetAllFacture();
         public Task<ServiceResponse<List<GetAllFactureDto>>> DeleteFacture(int id);
+        public Task<ServiceResponse<GetAllFactureDto>> GetFactureById(int id);
+        public Task<ServiceResponse<List<GetAllFactureDto>>> AddFacture(AddFactureDto newFacture);
+        public Task<ServiceResponse<GetAllFactureDto>> UpdateFacture(UpdateFactureDtocs updatedFacture);
     }
 }

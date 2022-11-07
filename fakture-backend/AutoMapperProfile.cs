@@ -9,6 +9,8 @@ namespace fakture_backend
         public AutoMapperProfile()
         {
             CreateMap<Facture, GetAllFactureDto>();
+            CreateMap<AddFactureDto, Facture>();
+
         }
     }
 }
