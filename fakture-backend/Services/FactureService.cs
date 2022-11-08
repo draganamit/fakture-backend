@@ -80,7 +80,7 @@ namespace fakture_backend.Services
             ServiceResponse<GetAllFactureDto> response = new ServiceResponse<GetAllFactureDto>();
             try
             {
-                Facture facture = await _context.Facture.FirstOrDefaultAsync(x => x.Id == updatedFacture.Id);
+                Facture facture = await _context.Facture.Include(x => x.Artikli).FirstOrDefaultAsync(x => x.Id == updatedFacture.Id);
                 facture.Datum = updatedFacture.Datum;
                 facture.Partner = updatedFacture.Partner;
                 facture.IznosBezPdv = updatedFacture.IznosBezPdv;

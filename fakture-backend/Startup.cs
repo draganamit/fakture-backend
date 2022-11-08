@@ -41,6 +41,8 @@ namespace fakture_backend
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped<IFactureService, FactureService>();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IArticleService, ArticleService>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
